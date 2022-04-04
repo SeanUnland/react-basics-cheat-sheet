@@ -14,10 +14,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 //   document.getElementById("root")
 // );
 
-// React 18 createRoot APIrequires below
-const container = document.getElementById("root");
-const rootContainer = ReactDOM.createRoot(container);
-rootContainer.render(
+// React 18 createRoot API requires below
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Router>
       <App />
