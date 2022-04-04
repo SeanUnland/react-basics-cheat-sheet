@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import ProductList from "./ProductList";
 import { generateProducts } from "./data";
 
@@ -14,12 +14,20 @@ const filterProducts = (filterTerm) => {
 };
 
 const UseTransition = ({}) => {
+  // useTransition()
+  // returns an array with two elements
+  // first index "isPending" is a boolean
+  // second index "startTransition" is a function like useState()
+  const [isPending, startTransition] = useTransition();
   const [filterTerm, setFilterTerm] = useState("");
 
   const filteredProducts = filterProducts(filterTerm);
 
   const updateFilterHandler = (event) => {
-    setFilterTerm(event.target.value);
+    // startTransition can wrap around logic that should be treated with a lower priority
+    startTransition(() => {
+      setFilterTerm(event.target.value);
+    });
   };
   return (
     <div>

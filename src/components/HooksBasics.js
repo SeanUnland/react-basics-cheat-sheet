@@ -25,7 +25,7 @@ const HooksBasics = ({}) => {
     <div>
       <h1>Hooks Basics</h1>
       <div>
-        {/* the input needs an onChange={} handler to make it dynamic when using
+        {/* the input tag needs an onChange={} handler to make it dynamic when using
         state */}
         {/* value should take in the state which is dynamic */}
         <input
