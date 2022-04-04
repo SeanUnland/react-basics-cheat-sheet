@@ -1,0 +1,10 @@
+.input-area {
+  margin-top: 4rem;
+}
+
+.animal-list {
+  margin: 10% 0 0 0;
+  font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
