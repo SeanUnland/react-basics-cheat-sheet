@@ -6,7 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 
-// Older React API setup
+// Older React version API setup
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />

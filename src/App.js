@@ -5,6 +5,7 @@ import Basics from "./components/Basics";
 import OnChange from "./components/OnChange";
 import HooksBasics from "./components/HooksBasics";
 import ClickEvents from "./components/ClickEvents";
+import UseTransition from "./useTransition/UseTransition";
 
 // Things to know
 // Props
@@ -66,6 +67,9 @@ function App() {
         <Link to="/clickevents">Click Events Page</Link>
       </div>
       <div>
+        <Link to="/usetransition">Use Transitions Page</Link>
+      </div>
+      <div>
         <Routes>
           <Route path="/"></Route>
           <Route
@@ -85,6 +89,7 @@ function App() {
           ></Route>
           <Route path="/hooksbasics" element={<HooksBasics />}></Route>
           <Route path="/clickevents" element={<ClickEvents />}></Route>
+          <Route path="/usetransition" element={<UseTransition />}></Route>
         </Routes>
       </div>
     </>
