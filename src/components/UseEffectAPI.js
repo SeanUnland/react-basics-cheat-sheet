@@ -4,8 +4,11 @@ import axios from "axios";
 const UseEffectAPI = ({}) => {
   const [user, setUser] = useState([]);
 
+  // create a function that fetches the data from the url
+  // using async await and axios
   const fetchData = async () => {
     let response = await axios.get("https://api.github.com/users");
+    // using the "response" variable
     // console log the data of the link to see the JSON API
     console.log(response.data);
     // call the state function "setUser()" and pass in the response.data to change the state
