@@ -6,6 +6,8 @@ import OnChange from "./components/OnChange";
 import HooksBasics from "./components/HooksBasics";
 import ClickEvents from "./components/ClickEvents";
 import UseTransition from "./useTransition/UseTransition";
+import UsingStatePractice from "./components/UsingStatePractice";
+import UseEffectAPI from "./components/UseEffectAPI";
 
 // Things to know
 // Props
@@ -70,8 +72,15 @@ function App() {
         <Link to="/usetransition">Use Transitions Page</Link>
       </div>
       <div>
+        <Link to="/usingstatepractice">Using State Practice</Link>
+      </div>
+      <div>
+        <Link to="/useeffectapi"> useEffect API Call</Link>
+      </div>
+
+      <div>
         <Routes>
-          <Route path="/"></Route>
+          <Route path="/">Home Page</Route>
           <Route
             path="/basics"
             element={
@@ -90,6 +99,11 @@ function App() {
           <Route path="/hooksbasics" element={<HooksBasics />}></Route>
           <Route path="/clickevents" element={<ClickEvents />}></Route>
           <Route path="/usetransition" element={<UseTransition />}></Route>
+          <Route
+            path="/usingstatepractice"
+            element={<UsingStatePractice />}
+          ></Route>
+          <Route path="/useeffectapi" element={<UseEffectAPI />}></Route>
         </Routes>
       </div>
     </>
