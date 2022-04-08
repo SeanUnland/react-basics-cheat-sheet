@@ -8,6 +8,7 @@ import ClickEvents from "./components/ClickEvents";
 import UseTransition from "./useTransition/UseTransition";
 import UsingStatePractice from "./components/UsingStatePractice";
 import UseEffectAPI from "./components/UseEffectAPI";
+import FetchingDataFromExpressBE from "./components/FetchingDataFromExpressBE";
 
 // Things to know
 // Props
@@ -36,6 +37,9 @@ function App() {
   };
 
   const message = "What are you doing?";
+
+  const fetchingDataMessage =
+    "I'm fetching data from the Express Back End here";
 
   // use the setName() function to change the state to "Bob" and add a random number
   useEffect(() => {
@@ -77,6 +81,9 @@ function App() {
       <div>
         <Link to="/useeffectapi"> useEffect API Call</Link>
       </div>
+      <div>
+        <Link to="/fetchingdatafromexpress"> Fetching Data From Express</Link>
+      </div>
 
       <div>
         <Routes>
@@ -104,6 +111,12 @@ function App() {
             element={<UsingStatePractice />}
           ></Route>
           <Route path="/useeffectapi" element={<UseEffectAPI />}></Route>
+          <Route
+            path="/fetchingdatafromexpress"
+            element={
+              <FetchingDataFromExpressBE message={fetchingDataMessage} />
+            }
+          ></Route>
         </Routes>
       </div>
     </>
