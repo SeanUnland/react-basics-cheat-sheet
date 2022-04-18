@@ -9,6 +9,7 @@ import UseTransition from "./useTransition/UseTransition";
 import UsingStatePractice from "./components/UsingStatePractice";
 import UseEffectAPI from "./components/UseEffectAPI";
 import FetchingDataFromExpressBE from "./components/FetchingDataFromExpressBE";
+import CatAPIUseEffect from "./components/CatAPIUseEffect";
 
 // Things to know
 // Props
@@ -84,6 +85,9 @@ function App() {
       <div>
         <Link to="/fetchingdatafromexpress"> Fetching Data From Express</Link>
       </div>
+      <div>
+        <Link to="/catapiuseeffect">Cat API useEffect</Link>
+      </div>
 
       <div>
         <Routes>
@@ -117,6 +121,7 @@ function App() {
               <FetchingDataFromExpressBE message={fetchingDataMessage} />
             }
           ></Route>
+          <Route path="/catapiuseeffect" element={<CatAPIUseEffect />}></Route>
         </Routes>
       </div>
     </>

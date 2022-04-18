@@ -4,7 +4,7 @@ import axios from "axios";
 const UseEffectAPI = ({}) => {
   const [user, setUser] = useState([]);
 
-  // create a function that fetches the data from the url
+  // create an async function that fetches the data from the url
   // using async await and axios
   const fetchData = async () => {
     let response = await axios.get("https://api.github.com/users");
@@ -33,11 +33,11 @@ const UseEffectAPI = ({}) => {
         {/* Array.map takes a call back function with a parameter */}
         {/* and return a specific key: "value" from the API data */}
         {/* in this example I target the 'login' key to return the values of that key */}
-        <p>
+        <div>
           {user.map((value) => {
-            return value.login[0];
+            return <p>{value.login}</p>;
           })}
-        </p>
+        </div>
 
         <div>
           {user.map((value) => {
