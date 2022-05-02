@@ -10,6 +10,7 @@ import UsingStatePractice from "./components/UsingStatePractice";
 import UseEffectAPI from "./components/UseEffectAPI";
 import FetchingDataFromExpressBE from "./components/FetchingDataFromExpressBE";
 import CatAPIUseEffect from "./components/CatAPIUseEffect";
+import UsingMaterialUI from "./components/UsingMaterialUI";
 
 // Things to know
 // Props
@@ -56,6 +57,8 @@ function App() {
 
   const onChangePageMessage = "This is the onChange Page";
 
+  const materialUIMessage = "This page shows examples of using Material UI";
+
   return (
     <>
       <div className="App">
@@ -87,6 +90,9 @@ function App() {
       </div>
       <div>
         <Link to="/catapiuseeffect">Cat API useEffect</Link>
+      </div>
+      <div>
+        <Link to="/usingmaterialui">Using Material UI</Link>
       </div>
 
       <div>
@@ -122,6 +128,10 @@ function App() {
             }
           ></Route>
           <Route path="/catapiuseeffect" element={<CatAPIUseEffect />}></Route>
+          <Route
+            path="/usingmaterialui"
+            element={<UsingMaterialUI materialMessage={materialUIMessage} />}
+          ></Route>
         </Routes>
       </div>
     </>
