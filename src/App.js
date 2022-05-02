@@ -62,77 +62,86 @@ function App() {
   return (
     <>
       <div className="App">
-        <Link to="/">Home Page</Link>
-      </div>
-      <div>
-        <Link to="/basics">Basics Page</Link>
-      </div>
-      <div>
-        <Link to="/onchange">On Change Page</Link>
-      </div>
-      <div>
-        <Link to="/hooksbasics">Hooks Basics Page</Link>
-      </div>
-      <div>
-        <Link to="/clickevents">Click Events Page</Link>
-      </div>
-      <div>
-        <Link to="/usetransition">Use Transitions Page</Link>
-      </div>
-      <div>
-        <Link to="/usingstatepractice">Using State Practice</Link>
-      </div>
-      <div>
-        <Link to="/useeffectapi"> useEffect API Call</Link>
-      </div>
-      <div>
-        <Link to="/fetchingdatafromexpress"> Fetching Data From Express</Link>
-      </div>
-      <div>
-        <Link to="/catapiuseeffect">Cat API useEffect</Link>
-      </div>
-      <div>
-        <Link to="/usingmaterialui">Using Material UI</Link>
-      </div>
+        <div className="links">
+          <Link to="/">Home Page</Link>
 
-      <div>
-        <Routes>
-          <Route path="/">Home Page</Route>
-          <Route
-            path="/basics"
-            element={
-              <Basics
-                name={name}
-                whatsUp="What's up?"
-                message={message}
-                onClicked={onCardClicked}
-              />
-            }
-          ></Route>
-          <Route
-            path="/onchange"
-            element={<OnChange onChangePageMessage={onChangePageMessage} />}
-          ></Route>
-          <Route path="/hooksbasics" element={<HooksBasics />}></Route>
-          <Route path="/clickevents" element={<ClickEvents />}></Route>
-          <Route path="/usetransition" element={<UseTransition />}></Route>
-          <Route
-            path="/usingstatepractice"
-            element={<UsingStatePractice />}
-          ></Route>
-          <Route path="/useeffectapi" element={<UseEffectAPI />}></Route>
-          <Route
-            path="/fetchingdatafromexpress"
-            element={
-              <FetchingDataFromExpressBE message={fetchingDataMessage} />
-            }
-          ></Route>
-          <Route path="/catapiuseeffect" element={<CatAPIUseEffect />}></Route>
-          <Route
-            path="/usingmaterialui"
-            element={<UsingMaterialUI materialMessage={materialUIMessage} />}
-          ></Route>
-        </Routes>
+          <div>
+            <Link to="/basics">Basics Page</Link>
+          </div>
+          <div>
+            <Link to="/onchange">On Change Page</Link>
+          </div>
+          <div>
+            <Link to="/hooksbasics">Hooks Basics Page</Link>
+          </div>
+          <div>
+            <Link to="/clickevents">Click Events Page</Link>
+          </div>
+          <div>
+            <Link to="/usetransition">Use Transitions Page</Link>
+          </div>
+          <div>
+            <Link to="/usingstatepractice">Using State Practice</Link>
+          </div>
+          <div>
+            <Link to="/useeffectapi"> useEffect API Call</Link>
+          </div>
+          <div>
+            <Link to="/fetchingdatafromexpress">
+              {" "}
+              Fetching Data From Express
+            </Link>
+          </div>
+          <div>
+            <Link to="/catapiuseeffect">Cat API useEffect</Link>
+          </div>
+          <div>
+            <Link to="/usingmaterialui">Using Material UI</Link>
+          </div>
+        </div>
+
+        <div>
+          <Routes>
+            <Route path="/">Home Page</Route>
+            <Route
+              path="/basics"
+              element={
+                <Basics
+                  name={name}
+                  whatsUp="What's up?"
+                  message={message}
+                  onClicked={onCardClicked}
+                />
+              }
+            ></Route>
+            <Route
+              path="/onchange"
+              element={<OnChange onChangePageMessage={onChangePageMessage} />}
+            ></Route>
+            <Route path="/hooksbasics" element={<HooksBasics />}></Route>
+            <Route path="/clickevents" element={<ClickEvents />}></Route>
+            <Route path="/usetransition" element={<UseTransition />}></Route>
+            <Route
+              path="/usingstatepractice"
+              element={<UsingStatePractice />}
+            ></Route>
+            <Route path="/useeffectapi" element={<UseEffectAPI />}></Route>
+            <Route
+              path="/fetchingdatafromexpress"
+              element={
+                <FetchingDataFromExpressBE message={fetchingDataMessage} />
+              }
+            ></Route>
+            <Route
+              path="/catapiuseeffect"
+              element={<CatAPIUseEffect />}
+            ></Route>
+            <Route
+              path="/usingmaterialui"
+              element={<UsingMaterialUI materialMessage={materialUIMessage} />}
+            ></Route>
+          </Routes>
+        </div>
       </div>
     </>
   );

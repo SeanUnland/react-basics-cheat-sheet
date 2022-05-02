@@ -28,7 +28,8 @@ const UsingMaterialUI = ({ materialMessage }) => {
 
   // onChange function for rating system
   const handleRatingChange = (event, newValue) => {
-    console.log(newValue);
+    console.log("This is the event", event);
+    console.log("This is the newValue", newValue);
     setValue(newValue);
   };
 

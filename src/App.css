@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 0 4% 0;
+}
+
+a {
+  color: #0a2342;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffc1cf;
+}
