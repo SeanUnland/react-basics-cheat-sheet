@@ -11,6 +11,7 @@ import UseEffectAPI from "./components/UseEffectAPI";
 import FetchingDataFromExpressBE from "./components/FetchingDataFromExpressBE";
 import CatAPIUseEffect from "./components/CatAPIUseEffect";
 import UsingMaterialUI from "./components/UsingMaterialUI";
+import Counter from "./components/Counter";
 
 // Things to know
 // Props
@@ -98,6 +99,9 @@ function App() {
           <div>
             <Link to="/usingmaterialui">Using Material UI</Link>
           </div>
+          <div>
+            <Link to="/counter">Counter Example</Link>
+          </div>
         </div>
 
         <div>
@@ -140,6 +144,7 @@ function App() {
               path="/usingmaterialui"
               element={<UsingMaterialUI materialMessage={materialUIMessage} />}
             ></Route>
+            <Route path="/counter" element={<Counter />}></Route>
           </Routes>
         </div>
       </div>
