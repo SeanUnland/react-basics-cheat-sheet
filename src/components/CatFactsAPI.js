@@ -20,7 +20,7 @@ const CatFactsAPI = ({}) => {
 
       <div>
         {catFact.map((value) => {
-          return <p>{value.text}</p>;
+          return <p>A Cat Fact: {value.text}</p>;
         })}
       </div>
     </div>
