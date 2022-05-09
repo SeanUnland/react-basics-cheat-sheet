@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Counter = ({}) => {
   const [count, setCount] = useState(0);
@@ -10,6 +10,7 @@ const Counter = ({}) => {
   const handleSubtract = () => {
     setCount(count - 1);
   };
+
   return (
     <>
       <div>

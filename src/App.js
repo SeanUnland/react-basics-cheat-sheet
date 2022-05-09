@@ -12,17 +12,20 @@ import FetchingDataFromExpressBE from "./components/FetchingDataFromExpressBE";
 import CatAPIUseEffect from "./components/CatAPIUseEffect";
 import UsingMaterialUI from "./components/UsingMaterialUI";
 import Counter from "./components/Counter";
+import CatFactsAPI from "./components/CatFactsAPI";
 
 // Things to know
 // Props
 // onClick
 // onBlur
 // onChange
+// onSubmit
 
 // Hooks
 // useState()
 // useEffect() - can be used to grab data from backend
 // useRef()
+// useContext()
 
 function App() {
   // useState()
@@ -102,6 +105,9 @@ function App() {
           <div>
             <Link to="/counter">Counter Example</Link>
           </div>
+          <div>
+            <Link to="/catfacts">Cat Facts API</Link>
+          </div>
         </div>
 
         <div>
@@ -145,6 +151,7 @@ function App() {
               element={<UsingMaterialUI materialMessage={materialUIMessage} />}
             ></Route>
             <Route path="/counter" element={<Counter />}></Route>
+            <Route path="/catfacts" element={<CatFactsAPI />}></Route>
           </Routes>
         </div>
       </div>
