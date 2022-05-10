@@ -26,6 +26,13 @@ const UsingMaterialUI = ({ materialMessage }) => {
     setNewItem("");
   };
 
+  const clearItems = (event) => {
+    console.log(event);
+    event.preventDefault();
+
+    setItem([]);
+  };
+
   // onChange function for rating system
   const handleRatingChange = (event, newValue) => {
     console.log("This is the event", event);
@@ -48,13 +55,16 @@ const UsingMaterialUI = ({ materialMessage }) => {
         ></Box>
         <TextField
           id="filled-basic"
-          label="Filled"
-          variant="filled"
+          label="Add Items..."
+          variant="standard"
           onChange={handleChange}
           value={newItem}
         />
         <Button variant="outlined" onClick={handleAdd}>
           Add Item
+        </Button>
+        <Button variant="outlined" onClick={clearItems}>
+          Clear Items
         </Button>
         <ul>{item}</ul>
         <p>What you type appears here: {newItem}</p>

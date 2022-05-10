@@ -14,6 +14,8 @@ const CatFactsAPI = ({}) => {
     catFactData();
   }, []);
 
+  const someMessage = "Hello There";
+
   return (
     <div>
       <h1>Cat Facts API</h1>
