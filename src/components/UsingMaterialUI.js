@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 import "../styles/using-material-ui.css";
 
 const UsingMaterialUI = ({ materialMessage }) => {
@@ -44,6 +45,9 @@ const UsingMaterialUI = ({ materialMessage }) => {
     <div className="whole-component">
       <h1>Using Material UI</h1>
       <h4>{materialMessage}</h4>
+      <div className="avatar">
+        <Avatar alt="Sean" src="https://i.imgur.com/yjxYvHN.jpg" />
+      </div>
       <div>
         <Box
           component="form"
@@ -60,14 +64,18 @@ const UsingMaterialUI = ({ materialMessage }) => {
           onChange={handleChange}
           value={newItem}
         />
-        <Button variant="outlined" onClick={handleAdd}>
-          Add Item
-        </Button>
-        <Button variant="outlined" onClick={clearItems}>
-          Clear Items
-        </Button>
-        <ul>{item}</ul>
-        <p>What you type appears here: {newItem}</p>
+        <br />
+        <div className="button-group">
+          <Button variant="outlined" onClick={handleAdd}>
+            Add Item
+          </Button>
+          <Button variant="outlined" onClick={clearItems}>
+            Clear Items
+          </Button>
+        </div>
+        <ul className="item-list">{item}</ul>
+        <p>What you type appears below:</p>
+        <p>{newItem}</p>
       </div>
       <div className="rating-section">
         <Typography component="legend">Give It A Rating</Typography>
