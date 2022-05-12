@@ -14,11 +14,11 @@ const CatFactsAPI = ({}) => {
     catFactData();
   }, []);
 
-  const someMessage = "Hello There";
+  const someMessage = "Cat Facts API";
 
   return (
     <div>
-      <h1>Cat Facts API</h1>
+      <h1>{someMessage}</h1>
 
       <div>
         {catFact.map((value) => {
