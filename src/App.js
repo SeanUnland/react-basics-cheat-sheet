@@ -63,6 +63,8 @@ function App() {
 
   const materialUIMessage = "This page shows examples of using Material UI";
 
+  const catFactsMessage = "Cat Facts API";
+
   return (
     <>
       <div className="App">
@@ -151,7 +153,10 @@ function App() {
               element={<UsingMaterialUI materialMessage={materialUIMessage} />}
             ></Route>
             <Route path="/counter" element={<Counter />}></Route>
-            <Route path="/catfacts" element={<CatFactsAPI />}></Route>
+            <Route
+              path="/catfacts"
+              element={<CatFactsAPI catFactsMessage={catFactsMessage} />}
+            ></Route>
           </Routes>
         </div>
       </div>

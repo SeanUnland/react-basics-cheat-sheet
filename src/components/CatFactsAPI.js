@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const CatFactsAPI = ({}) => {
+const CatFactsAPI = ({ catFactsMessage }) => {
   const [catFact, setCatFact] = useState([]);
 
   const catFactData = async () => {
@@ -14,11 +14,9 @@ const CatFactsAPI = ({}) => {
     catFactData();
   }, []);
 
-  const someMessage = "Cat Facts API";
-
   return (
     <div>
-      <h1>{someMessage}</h1>
+      <h1>{catFactsMessage}</h1>
 
       <div>
         {catFact.map((value) => {
